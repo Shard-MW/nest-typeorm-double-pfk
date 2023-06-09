@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mysql-db:
+    image: mysql:8.0.17
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: poc-nest-typeorm-double-pfk
+    ports:
+      - "4306:3306"
+  
+  adminer:    
+    image: adminer    
+    ports:      
+      - "9080:8080"
