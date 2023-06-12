@@ -11,7 +11,7 @@ import { Address } from './address/entities/address.entity';
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
-      port: 4306,
+      port: 3306,
       username: 'root',
       password: '123',
       database: 'poc-nest-typeorm-double-pfk',

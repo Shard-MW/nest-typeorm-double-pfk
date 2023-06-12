@@ -6,9 +6,12 @@ services:
       MYSQL_ROOT_PASSWORD: 123
       MYSQL_DATABASE: poc-nest-typeorm-double-pfk
     ports:
-      - "4306:3306"
+      - "3306:3306"
   
   adminer:    
-    image: adminer    
+    image: adminer
+    restart: always
+    depends_on: 
+      - mysql-db
     ports:      
-      - "9080:8080"
+      - "8080:8080"
